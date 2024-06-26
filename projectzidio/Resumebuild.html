@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <h1>Resume Builder</h1>
+        <nav>
+            <a href="#profile">Profile</a>
+            <a href="#templates">Templates</a>
+            <a href="#sections">Sections</a>
+            <a href="#preview">Preview</a>
+            <a href="#export">Export</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="profile">
+            <h2>Profile Management</h2>
+            <form id="profile-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="contact">Contact:</label>
+                <input type="text" id="contact" name="contact" required>
+                <button type="submit">Save Profile</button>
+            </form>
+        </section>
+
+        <section id="templates">
+            <h2>Template Selection</h2>
+            <div>
+                <label for="templates">Choose a template:</label>
+                <select id="templates" name="templates">
+                    <option value="simple">Simple</option>
+                    <option value="professional">Professional</option>
+                </select>
+            </div>
+        </section>
+
+        <section id="sections">
+            <h2>Resume Sections</h2>
+            <div id="work-experience">
+                <h3>Work Experience</h3>
+                <button onclick="addSection('work-experience')">Add</button>
+                <div class="entry"></div>
+            </div>
+            <div id="education">
+                <h3>Education</h3>
+                <button onclick="addSection('education')">Add</button>
+                <div class="entry"></div>
+            </div>
+            <div id="skills">
+                <h3>Skills</h3>
+                <button onclick="addSection('skills')">Add</button>
+                <div class="entry"></div>
+            </div>
+            <div id="achievements">
+                <h3>Achievements</h3>
+                <button onclick="addSection('achievements')">Add</button>
+                <div class="entry"></div>
+            </div>
+        </section>
+
+        <section id="preview">
+            <h2>Real-Time Preview</h2>
+            <div id="resume-preview"></div>
+        </section>
+
+        <section id="export">
+            <h2>Export Options</h2>
+            <button onclick="exportResume()">Export as PDF</button>
+        </section>
+    </main>
+
+    <script src="Script.js"></script>
+</body>
+</html>
