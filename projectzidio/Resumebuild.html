@@ -43,6 +43,7 @@
 
         <section id="sections">
             <h2>Resume Sections</h2>
+<<<<<<< HEAD
             <div id="work-experience">
                 <h3>Work Experience</h3>
                 <button onclick="addSection('work-experience')">Add</button>
@@ -74,6 +75,24 @@
                 }
             }
             </script>
+=======
+              <div id="work-experience">
+        <h3>Work Experience</h3>
+        <button onclick="addSection('work-experience')">Add</button>
+        <div id="experienceLabel">
+            <label for="sections">Your Experience:</label>
+            <input type="text" id="experienceInput" name="experienceInput" required>
+        </div>
+        <div class="entry"></div>
+    </div>
+
+    <script>
+        function addSection(sectionId) {
+            var experienceLabel = document.getElementById('experienceLabel');
+            experienceLabel.style.display = 'block';
+        }
+    </script>
+>>>>>>> e76aafc8d157fbaefc6421a8155a8c5e28573bb1
             <div id="education">
                 <h3>Education</h3>
                 <button onclick="addSection1('education')">Add</button>
