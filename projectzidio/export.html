@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder - Export Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2em;
+        }
+
+        .export-options {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .export-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 200px;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            text-align: center;
+        }
+
+        .export-card:hover {
+            transform: scale(1.05);
+        }
+
+        .export-card img {
+            max-width: 100%;
+            height: 100px;
+        }
+
+        .export-card h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .export-card button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .export-card button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Export Your Resume</h1>
+        <div class="export-options">
+            <div class="export-card" onclick="exportResume('pdf')">
+                <img src="pdf-icon.png" alt="PDF Icon">
+                <h2>Export as PDF</h2>
+                <button>Download PDF</button>
+            </div>
+            <div class="export-card" onclick="exportResume('word')">
+                <img src="word-icon.png" alt="Word Icon">
+                <h2>Export as Word</h2>
+                <button>Download Word</button>
+            </div>
+            <div class="export-card" onclick="exportResume('text')">
+                <img src="text-icon.png" alt="Text Icon">
+                <h2>Export as Text</h2>
+                <button>Download Text</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function exportResume(format) {
+            const resumeData = {
+                name: "John Doe",
+                email: "john.doe@example.com",
+                phone: "123-456-7890",
+                summary: "Experienced professional with a proven track record...",
+                experience: "Company A: Role, Company B: Role...",
+                education: "University X: Degree, University Y: Degree...",
+                skills: "Skill 1, Skill 2, Skill 3..."
+            };
+
+            if (format === 'pdf') {
+                exportAsPDF(resumeData);
+            } else if (format === 'word') {
+                exportAsWord(resumeData);
+            } else if (format === 'text') {
+                exportAsText(resumeData);
+            }
+        }
+
+        function exportAsPDF(data) {
+            alert('Export as PDF clicked');
+            // Here you can add logic to convert data to PDF format and trigger download
+        }
+
+        function exportAsWord(data) {
+            alert('Export as Word clicked');
+            // Here you can add logic to convert data to Word format and trigger download
+        }
+
+        function exportAsText(data) {
+            const textContent = `
+                Name: ${data.name}\n
+                Email: ${data.email}\n
+                Phone: ${data.phone}\n
+                Summary: ${data.summary}\n
+                Experience: ${data.experience}\n
+                Education: ${data.education}\n
+                Skills: ${data.skills}
+            `;
+
+            const blob = new Blob([textContent], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'resume.txt';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>

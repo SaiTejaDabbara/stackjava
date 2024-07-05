@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="icon" href="logo.png">
+    <title>Resume</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12pt;
+            background: linear-gradient(135deg, #f4f4f4 25%, #e4e4e4 100%);
+            background-attachment: fixed;
+        }
+        .page {
+            width: 21cm;
+            min-height: 29.7cm;
+            padding: 2cm;
+            margin: 2cm auto;
+            background: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        @media print {
+            .page {
+                margin: 0;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                min-height: initial;
+                box-shadow: initial;
+                background: initial;
+                page-break-after: always;
+            }
+        }
+        .title {
+            font-weight: 600;
+            color: #333;
+        }
+        .special-login {
+            display: inline-block;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: white;
+            background-color: #007bff;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .special-login:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        hr {
+            border-top: 1px solid #007bff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .section {
+            margin-bottom: 1.5em;
+            padding: 1em;
+            border-radius: 8px;
+        }
+        .section.personal-info {
+            background-color: #e8f4ff;
+        }
+        .section.objective {
+            background-color: #fdf8e1;
+        }
+        .section.experience {
+            background-color: #eaf9ea;
+        }
+        .section.education {
+            background-color: #f4e8ff;
+        }
+        .section.skills {
+            background-color: #fff3e8;
+        }
+        .section.personal-details {
+            background-color: #f0f8ff;
+        }
+        .section.languages-known {
+            background-color: #ffe8e8;
+        }
+        .section.declaration {
+            background-color: #fff9e8;
+        }
+        .fw-bold {
+            font-weight: 600;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .footer-links a:hover {
+            color: #0056b3;
+            transform: scale(1.05);
+        }
+        .profile-link {
+            display: inline-block;
+            font-weight: bold;
+            color: white;
+            background-color: #28a745;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .profile-link:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <a href="login.html" class="special-login">Login</a>
+    <div class="page">
+        <div class="subpage">
+            <table class="w-100">
+                <tbody>
+                    <tr>
+                        <td colspan="2" class="text-center fw-bold fs-4">Resume</td>
+                    </tr>
+                    <tr class="section personal-info">
+                        <td style="width: 100px;">
+                            <img src="menicon.png" alt="Profile Picture" style="width: 100%;">
+                        </td>
+                        <td>
+                            <a href="profile.html" class="profile-link">Profile</a>
+                            <div class="fw-bold name">RAM</div>
+                            <div>Mobile: <span class="mobile">+91-9773878265</span></div>
+                            <div>Email: <span class="email">ram44@gmail.com</span></div>
+                            <div>Address: <span class="address">B-482 Street No 32, Mahavir Enclave Part-2</span></div>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr class="section objective">
+                        <td class="fw-bold align-top text-nowrap pr title">Objective</td>
+                        <td class="objective">
+                            To be a part of an organization where I get a chance to use my knowledge and skills to contribute to the progress of the organization as well as myself.
+                        </td>
+                    </tr>
+                    <tr class="section experience">
+                        <td class="fw-bold align-top text-nowrap pr title">Experience</td>
+                        <td class="experiences">
+                            <div class="experience mb-2">
+                                <div class="fw-bold">- <span class="job-role">Guest Services Representative</span> (<span class="duration">2+ Years</span>)</div>
+                                <div class="company">Dominos, New Delhi</div>
+                                <div><span class="working-from">October 2020</span> – <span class="working-to">Currently Working</span></div>
+                                <div class="work-description">Handling customers and fulfilling their needs</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="section education">
+                        <td class="fw-bold align-top text-nowrap pr title">Education</td>
+                        <td class="educations">
+                            <div class="education mb-2">
+                                <div class="fw-bold">- <span class="course">Completed 12th Class (Arts Stream)</span></div>
+                                <div class="institute">Central Board Of Secondary Education, New Delhi</div>
+                                <div class="date">Passed in 2018</div>
+                            </div>
+                            <div class="education mb-2">
+                                <div class="fw-bold">- <span class="course">Bachelor’s of Arts (Programme)</span></div>
+                                <div class="institute">Delhi University (SOL), New Delhi</div>
+                                <div class="date">Currently Pursuing</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="section skills">
+                        <td class="fw-bold align-top text-nowrap pr title">Skills</td>
+                        <td class="skills">
+                            <div class="skill">- Basic Knowledge in Computer & Internet</div>
+                            <div class="skill">- MS Office (Word, Excel, PowerPoint)</div>
+                        </td>
+                    </tr>
+                    <tr class="section personal-details">
+                        <td class="fw-bold align-top text-nowrap pr title">Personal Details</td>
+                        <td class="personal-details">
+                            <table class="pd-table">
+                                <tr>
+                                    <td>Date of Birth</td>
+                                    <td>: <span class="date-of-birth">06 March 2001</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Gender</td>
+                                    <td>: <span class="gender">Female</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Religion</td>
+                                    <td>: <span class="religion">Hindhu</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nationality</td>
+                                    <td>: <span class="nationality">Indian</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Marital Status</td>
+                                    <td>: <span class="marital-status">Unmarried</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Hobbies</td>
+                                    <td>: <span class="hobbies">Listening to Music</span></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="section languages-known">
+                        <td class="fw-bold align-top text-nowrap pr title">Languages Known</td>
+                        <td class="languages-known">
+                            English & Hindi
+                        </td>
+                    </tr>
+                    <tr class="section declaration">
+                        <td class="fw-bold align-top text-nowrap pr title">Declaration</td>
+                        <td class="declaration">
+                            I hereby declare that the above information is correct to the best of my knowledge and can be supported by relevant documents as and when required.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Date:</td>
+                        <td class="name text-end">Ram</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <footer class="text-center mt-4">
+            <div class="footer-links">
+                <a href="template.html">More Templates</a>
+                <a href="newresume.html">Create Your Own Resume</a>
+                <a href="export.html">Export Resume</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

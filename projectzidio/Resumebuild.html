@@ -46,21 +46,76 @@
             <div id="work-experience">
                 <h3>Work Experience</h3>
                 <button onclick="addSection('work-experience')">Add</button>
+                
+                
                 <div class="entry"></div>
             </div>
+            <script>
+            function addSection() {
+                var entryDiv = document.querySelector('.entry');
+                if (!entryDiv.innerHTML) {
+                    var label = document.createElement('label');
+                    label.setAttribute('for', 'experienceInput');
+                    label.textContent = 'Your Experience:';
+                    
+                    var input = document.createElement('input');
+                    input.type = 'text';
+                    input.id = 'experienceInput';
+                    input.name = 'experienceInput';
+                    input.required = true;
+                    
+                    var submitButton = document.createElement('button');
+                    submitButton.type = 'submit';
+                    submitButton.textContent = 'Submit';
+                    
+                    entryDiv.appendChild(label);
+                    entryDiv.appendChild(input);
+                    entryDiv.appendChild(submitButton);
+                }
+            }
+            </script>
             <div id="education">
                 <h3>Education</h3>
-                <button onclick="addSection('education')">Add</button>
+                <button onclick="addSection1('education')">Add</button>
                 <div class="entry"></div>
             </div>
-            <div id="skills">
-                <h3>Skills</h3>
-                <button onclick="addSection('skills')">Add</button>
-                <div class="entry"></div>
-            </div>
+            <script>
+                function addSection1(section) {
+                    const entryDiv = document.getElementById(section + '-entry');
+                    const formContainer = document.createElement('div');
+                    formContainer.classList.add('form-container');
+        
+                    formContainer.innerHTML = `
+                        <form>
+                            <label for="school">School:</label>
+                            <input type="text" id="school" name="school"><br><br>
+                            
+                            <label for="college">College:</label>
+                            <input type="text" id="college" name="college"><br><br>
+                            
+                            <label for="degree">Degree:</label>
+                            <input type="text" id="degree" name="degree"><br><br>
+                            
+                            <label for="field">Field of Study:</label>
+                            <input type="text" id="field" name="field"><br><br>
+                            
+                            <label for="start-year">Start Year:</label>
+                            <input type="number" id="start-year" name="start-year"><br><br>
+                            
+                            <label for="end-year">End Year:</label>
+                            <input type="number" id="end-year" name="end-year"><br><br>
+                            
+                            <input type="submit" value="Submit">
+                        </form>
+                    `;
+        
+                    entryDiv.appendChild(formContainer);
+                    formContainer.style.display = 'block';
+                }
+            </script>
             <div id="achievements">
                 <h3>Achievements</h3>
-                <button onclick="addSection('achievements')">Add</button>
+                <button onclick="addSection3('achievements')">Add</button>
                 <div class="entry"></div>
             </div>
         </section>

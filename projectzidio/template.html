@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder - Template Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2em;
+        }
+
+        .templates {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .template-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 200px;
+            padding: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .template-card:hover {
+            transform: scale(1.05);
+        }
+
+        .template-card img {
+            max-width: 100%;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .template-card h2 {
+            font-size: 1.2em;
+            margin: 10px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Resume Template</h1>
+        <div class="templates">
+            <div class="template-card" onclick="selectTemplate('template1')">
+                <img src="template1.jpg" alt="Template 1">
+                <h2>Template 1</h2>
+            </div>
+            <div class="template-card" onclick="selectTemplate('template2')">
+                <img src="template2.png" alt="Template 2">
+                <h2>Template 2</h2>
+            </div>
+            <div class="template-card" onclick="selectTemplate('template3')">
+                <img src="template3.jpg" alt="Template 3">
+                <h2>Template 3</h2>
+            </div>
+            <!-- Add more templates as needed -->
+        </div>
+    </div>
+
+    <script>
+        function selectTemplate(templateId) {
+            alert(`Template ${templateId} selected!`);
+            // Here you can add code to save the selected template and proceed to the next step in the application
+        }
+    </script>
+</body>
+</html>

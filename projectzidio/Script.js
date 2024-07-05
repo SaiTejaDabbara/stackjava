@@ -33,3 +33,27 @@ function exportResume() {
     link.download = 'resume.pdf';
     link.click();
 }
+function addSection() {
+    var entryDiv = document.querySelector('.entry');
+    if (!entryDiv.innerHTML) {
+        var label = document.createElement('label');
+        label.setAttribute('for', 'experienceInput');
+        label.textContent = 'Your Experience:';
+        
+        var input = document.createElement('input');
+        input.type = 'text';
+        input.id = 'experienceInput';
+        input.name = 'experienceInput';
+        input.required = true;
+        
+        var submitButton = document.createElement('button');
+        submitButton.type = 'submit';
+        submitButton.textContent = 'Submit';
+        
+        entryDiv.appendChild(label);
+        entryDiv.appendChild(input);
+        entryDiv.appendChild(submitButton);
+    }
+}
+
+
